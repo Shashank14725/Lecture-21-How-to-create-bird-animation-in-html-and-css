@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bird Animation in HTML and CSS</title>
+    <style>
+        .bird{
+            width: 163px;
+            height: 160px;
+            background-image: url("./img/bird3.png");
+            background-repeat: no-repeat;
+            animation-name: fly;
+            animation-iteration-count: infinite;
+            animation-duration: 1s;
+            animation-timing-function: steps(5);
+            
+           
+                }
+        @keyframes fly{
+            0%{
+                background-position: 0px 0px;
+               
+            }
+            100%{
+                background-position: -2109px 0px;
+              
+            }
+        }
+        .birdcontainer{
+            position: relative;
+            animation-name: birdcont;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        @keyframes birdcont{
+            from{
+             left: 0%;
+            }
+            to{
+             left: 100%;
+            }
+        }
+        .bird2{
+            width: 110px;
+            height: 112px;
+            background-image: url("./img/twitter\ bird.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            animation-name: fly2;
+            animation-duration: 0.8s;
+            animation-iteration-count: infinite;
+            animation-timing-function: steps(3);
+            transform: rotateZ(45deg);
+            animation-delay: 1s;
+            
+        }
+        @keyframes fly2{
+            0%{
+               background-position: 0px 0px;
+            }
+            100%{
+                background-position: -345px 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="birdcontainer">
+        <div class="bird"></div>
+        <div class="bird2"></div>
+    </div>
+    
+</body>
+</html>
